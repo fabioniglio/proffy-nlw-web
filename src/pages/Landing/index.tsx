@@ -13,8 +13,11 @@ function Landing() {
   return (
     <div id="page-landing">
       <div id="page-landing-content" className="container">
-        <img src={logoImg} alt="Proffy" />
-        <h2>Your Platform of studies online</h2>
+        <div className="logo-container">
+          <img src={logoImg} alt="Proffy" />
+          <h2>Your Platform of studies online</h2>
+        </div>
+
         <img src={landingImg} alt="" className="hero-image" />
         <div className="buttons-container">
           <a href="" className="study">
@@ -24,11 +27,11 @@ function Landing() {
 
           <a href="" className="give-classes">
             <img src={giveClassesIcon} alt="Study" />
-            Study
+            Give Classes
           </a>
         </div>
         <span className="total-connections">
-          Total of 200 conections that happen{" "}
+          Total of 200 conections that happen!
           <img src={purpleHeartIcon} alt="Purple Heart" />
         </span>
       </div>
