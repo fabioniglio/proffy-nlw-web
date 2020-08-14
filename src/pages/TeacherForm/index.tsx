@@ -2,6 +2,8 @@ import React from "react";
 import PageHeader from "../../components/PageHeader";
 
 import "./styles.css";
+import Input from "../../components/Input/Input";
+import warningIcon from "../../assets/images/icons/warning.svg";
 
 function TeacherForm() {
   return (
@@ -14,21 +16,27 @@ function TeacherForm() {
       <main>
         <fieldset>
           <legend>Your Information</legend>
-          <div className="input-block">
-            <label htmlFor="name">Full Name</label>
-            <input type="text" id="subject" />
-          </div>
 
-          <div className="input-block">
-            <label htmlFor="avatar">Avatar</label>
-            <input type="text" id="avatar" />
-          </div>
-
-          <div className="input-block">
-            <label htmlFor="whatsapp">Whatsapp</label>
-            <input type="text" id="whatsapp" />
-          </div>
+          <Input name="name" label="Full Name" />
+          <Input name="avatar" label="Avatar" />
+          <Input name="whatsapp" label="Whatsapp" />
         </fieldset>
+
+        <fieldset>
+          <legend>About the Classes</legend>
+
+          <Input name="subject" label="Subject" />
+          <Input name="cost" label="Cost of the hour" />
+        </fieldset>
+
+        <footer>
+          <p>
+            <img src={warningIcon} alt="Important Warning" />
+            Important! <br />
+            Fill all the inputs!
+          </p>
+          <button type="button">Save</button>
+        </footer>
       </main>
     </div>
   );
